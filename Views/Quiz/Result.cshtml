@@ -1,0 +1,19 @@
+﻿@model List<QuizApp.Models.QuizResult>
+
+<h2>Quiz Results</h2>
+<p>Your Score: @ViewBag.Score / @ViewBag.Total</p>
+
+@*<ul>
+    @foreach (var result in Model)
+    {
+        <li>
+            <strong>Question:</strong> @result.QuestionText <br />
+            <strong>Your Answer:</strong> @(result.UserAnswer ?? "Not answered") <br />
+            <strong>Correct Answer:</strong> @result.CorrectAnswer <br />
+            <strong>Result:</strong> @(result.IsCorrect ? "Correct" : "Incorrect")
+        </li>
+        <hr />
+    }
+</ul>*@
+
+<a href="@Url.Action("Index", "Quiz")">Restart Quiz</a>
